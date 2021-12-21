@@ -1,0 +1,134 @@
+use railway;
+
+db.routes.insert({name:"main-line",route:[{name:"Bhubaneswar", fair:0},
+{name:"Cuttack Jn.", fair:20},
+{name:"Khurda Road Jn.", fair:40},
+{name:"Puri Jn.", fair:60},
+{name:"Jajpur-Keonjhar Road", fair:80},
+{name:"Bhadrak", fair:100},
+{name:"Paradeep", fair:120},
+{name:"Balasore", fair:140},
+{name:"Jaleswar", fair:160},
+{name:"Berhampur", fair:180},
+{name:"Rayagada", fair:200},
+{name:"Sambalpur", fair:220},
+{name:"Hirakud", fair:240},
+{name:"Balangir", fair:260},
+{name:"Koraput", fair:280},
+{name:"Hyderabad", fair:360},
+{name:"Kolkata", fair:380},
+{name:"Mumbai", fair:400} ,
+{name:"Delhi", fair:420},
+{name:"Srinagar", fair:440},
+{name:"Punjab", fair:460},
+{name:"Bengaluru", fair:480},		 
+{name:"Thiruvanathapuram", fair:490},
+{name:"Goa", fair:500}]});
+
+
+db.routes.insert({name:"Koraput-line",route:[{name:"Bhubaneswar", fair:0},
+{name:"Khurdha Road Jn", fair:20},
+{name:"Balugaon", fair:40},
+{name:"Chilika", fair:80},
+{name:"Berhampur", fair:100},
+{name:"Palasa", fair:120},
+{name:"Srikakulam Road", fair:140},
+{name:"Vizianagram", fair:160},
+{name:"Parvatipuram", fair:180},
+{name:"Rayagada", fair:200},
+{name:"Tikri", fair:220},
+{name:"Koraput", fair:240}]});
+
+db.routes.insert({name:"Sambalpur-line",route:[{name:"Bhubaneswar", fair:0},
+{name:"Mancheswar", fair:20},
+{name:"Naraj Marthapur", fair:60},
+{name:"Dhenkanal", fair:80},
+{name:"Talcher Road", fair:100},
+{name:"Angul", fair:120},
+{name:"Bamur", fair:140},
+{name:"Rairakhol", fair:160},
+{name:"Sambalpur Road", fair:180},
+{name:"Sambalpur Jn.", fair:200},	 
+{name:"Hirakud", fair:220},
+{name:"Bargarh Road", fair:240},
+{name:"Barpali", fair:260},
+{name:"Loisingha", fair:280},
+{name:"Balangir", fair:320}]});
+
+
+
+
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+db.trains.insert({name:"Hirakhand Express", route:"main-line", classes:[{name:"Tier-2 AC", seats:30}, {name:"Tier-3 AC", seats:100}, {name:"Sleeper", seats:150}]});
+
+
+
+
+db.classes.insert({name:"Tier-2 AC", fairRatio:1.05})
+db.classes.insert({name:"Tier-3 AC", fairRatio:1.02})
+db.classes.insert({name:"Sleeper", fairRatio:1})
+
+db.schedules.insertMany([
+{time:"05.00 am"},
+{time:"06.00 am"},
+{time:"09.30 am"},
+{time:"10.00 am"},
+{time:"10.30 am"},
+{time:"11.00 am"},
+{time:"12.00 pm"},
+{time:"1.30 pm"},
+{time:"02.00 pm"},
+{time:"03.30 pm"},
+{time:"04.00 pm"},
+{time:"05.30 pm"},
+{time:"07.00 pm"},
+{time:"11.00 pm"},
+])
+
+
+db.cards.insert({card:"1234123412341234", cvc:"123" ,exp:"12/12", amount:10000.00});
+db.cards.insert({card:"1111111111111111", cvc:"111" ,exp:"11/11", amount:10000.00});
+
+
+
+
+db.phones.insert({phone:"0777296705", pin:"1234"});
+db.phones.insert({phone:"0776655707", pin:"1234"});
+
+
+
+
+db.employees.insert({"firstName":"Prasannjit","lastName":"Mohapatra","nic":"123456789V","address":[{"street":"a","city":"b","state":"c"},{"street":"a1","city":"b1","state":"c1"}]});
+
+
+
+
+**************************************************************************************************************************************
+
+#Things to do:
+
+1. Enter 2-3 more routes and edit the main route as well(Refer to some original train routes from google)
+2. Add some more trains and edit the existing
+3. Do not change classes
+4. add some times in between the given timings and other than that also
+5. add 3-4 more cards
+6. add 5-6 more phone numbers
+7. add more 2-3 names in employees
+8. add neha's and yours name in admins
+
+
+NOTE:- PLEASE FOLLOW THE SAME SYNTAX AS THE SAMPLES, IT WOULD BE BETTER IF U COPY THE ABOVE LINE AND THEN EDIT.
+
+
+
+
+
+
